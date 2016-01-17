@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StringUtilityController">
+   <children>
+      <Button fx:id="countLetters" layoutX="56.0" layoutY="53.0" mnemonicParsing="false" onAction="#handlerCountLetter" prefHeight="31.0" prefWidth="141.0" text="Count Letters" textAlignment="CENTER" />
+      <Button fx:id="revLetters" layoutX="56.0" layoutY="110.0" mnemonicParsing="false" onAction="#handlerRevLetter" prefHeight="31.0" prefWidth="141.0" text="Reverse Letters" textAlignment="CENTER" />
+      <Button fx:id="remDuplicate" layoutX="56.0" layoutY="169.0" mnemonicParsing="false" onAction="#handlerRemDuplicate" text="Remove Duplicate" textAlignment="CENTER" />
+      <TextField fx:id="input" layoutX="275.0" layoutY="79.0" prefHeight="31.0" prefWidth="239.0" />
+      <TextField fx:id="output" layoutX="275.0" layoutY="141.0" prefHeight="31.0" prefWidth="239.0" />
+      <Label layoutX="276.0" layoutY="53.0" text="Input" />
+      <Label layoutX="275.0" layoutY="115.0" text="Output" />
+   </children>
+</AnchorPane>
