@@ -1,0 +1,28 @@
+package lab.problemA.rulesets;
+
+import java.awt.Component;
+import java.util.HashMap;
+
+import lab.problemA.RulesSet;
+import lab.problemA.windows.AddrWindow;
+import lab.problemA.windows.ProfileWindow;
+
+final public class RuleSetFactory {
+	private RuleSetFactory() {
+	}
+
+	static HashMap<Class<? extends Component>, RulesSet> map = new HashMap<>();
+
+	static {
+		map.put(AddrWindow.class, new AddrWindowRulesSet());
+		map.put(ProfileWindow.class, new ProfileWindowRulesSet());
+	}
+
+	public static RulesSet getRuleSet(Component c) {
+		Class<? extends Component> cl = c.getClass();
+		if (!map.containsKey(cl)) {
+			throw new IllegalArgumentException("No RuleSet found for this Component");
+		}
+		return map.get(cl);
+	}
+}
