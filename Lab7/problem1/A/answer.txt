@@ -1,0 +1,7 @@
+The reason of these both list are not equal is
+
+# while comparing two list using contains()- use the equals() method of Object class
+and it returns true only when both element's hashcode  of list are same.
+
+
+

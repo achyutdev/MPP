@@ -1,0 +1,12 @@
+In the following tracker.containsKey(e) statement is always true this is because every employee in the list are different object that mean they have
+unique hashCode.
+
+it can not remove duplicate employee from list.
+
+	for(int i = 0; i < employees.size(); ++i) {
+			Employee e = employees.get(i);
+			if(!tracker.containsKey(e)) {
+				tracker.put(e, e);
+				noDupsList.add(e);
+			}
+		}
